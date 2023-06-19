@@ -1,2 +1,5 @@
-# java101
-môj prvý kurz o jave
+# Java101
+
+toto je môj prvý kurz skolenia v programovacom jazyku Java. Je to najmegasupa jazyk vo svete 
+
+
