@@ -4,3 +4,5 @@ toto je môj prvý kurz skolenia v programovacom jazyku Java. Je to najmegasupa 
 Aj tak je Python najlepší.
 
 zmena
+
+Toto je dnesna zmena
