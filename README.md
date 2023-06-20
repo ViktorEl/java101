@@ -8,3 +8,5 @@ zmena
 Toto je dnesna zmena
 
 Druha zmena - nieco napisem a lokálne commitnem
+
+Toto je najnovšia verzia v megasupa kode
