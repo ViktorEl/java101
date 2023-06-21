@@ -134,11 +134,14 @@ public class Reactor extends AbstractActor {
             hammer.use();
             this.damage = 0;
             this.temperature = 0;
+            setAnimation(normalAnimation);
         }
         else {
             hammer.use();
             this.damage = this.damage - 50;
             this.temperature = 0;
+            setAnimation(normalAnimation);
         }
+
     }
 }
