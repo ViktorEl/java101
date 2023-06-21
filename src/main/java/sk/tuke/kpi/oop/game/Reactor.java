@@ -118,4 +118,27 @@ public class Reactor extends AbstractActor {
         }
 
     }
+
+    public void repairWith(Hammer hammer) {
+        if (hammer == null) {
+            return;
+        }
+        if (this.damage == 0) {
+            return;
+        }
+
+        if (this.damage == 100) {
+            return;
+        }
+        if (this.damage < 50) {
+            hammer.use();
+            this.damage = 0;
+            this.temperature = 0;
+        }
+        else {
+            hammer.use();
+            this.damage = this.damage - 50;
+            this.temperature = 0;
+        }
+    }
 }
