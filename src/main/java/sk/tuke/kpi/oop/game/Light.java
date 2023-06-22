@@ -8,6 +8,8 @@ public class Light extends AbstractActor {
     private Animation lightOn;
     private Animation lightOff;
 
+    private boolean isPowered;
+
 
 
     public Light() {
@@ -34,5 +36,10 @@ public class Light extends AbstractActor {
             this.isOn = true;
             setAnimation(lightOn);
         }
+    }
+
+
+    private void setElectricityFlow(boolean isPowered) {
+        this.isPowered = isPowered;
     }
 }
