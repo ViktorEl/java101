@@ -15,17 +15,22 @@ public class Reactor extends AbstractActor {
     private Animation hotAnimation;
     private Animation brokenAnimation;
 
+    private Animation offAnimation;
+
     public Reactor() {
         this.temperature = 0;
         this.state = false;
         this.damage = 0;
+
+        this.offAnimation = new Animation("sprites/reactor.png");
+        setAnimation(offAnimation);
+
         this.normalAnimation = new Animation(
             "sprites/reactor_on.png",
             80, 80,
             0.1f,
             Animation.PlayMode.LOOP_PINGPONG
         );
-        setAnimation(this.normalAnimation);
 
         this.hotAnimation = new Animation(
             "sprites/reactor_hot.png",
@@ -144,4 +149,17 @@ public class Reactor extends AbstractActor {
         }
 
     }
+
+    public void turnOn() {
+        this.state = true;
+    }
+
+    public void turnOf() {
+        this.state = false;
+    }
+
+    public boolean isRunning() {
+        return this.state;
+    }
+
 }
