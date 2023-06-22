@@ -8,6 +8,8 @@ import sk.tuke.kpi.gamelib.graphics.Point;
 
 
 public class Reactor extends AbstractActor {
+
+    // Clenske premenne
     private int temperature;
     private boolean state;
     private int damage;
@@ -17,7 +19,9 @@ public class Reactor extends AbstractActor {
 
     private Animation offAnimation;
 
-    public Reactor() {
+    private Light light;
+
+    public Reactor() {  // konstruktor - inicializovanie/ nastavovanie vlastnostnosti atributov
         this.temperature = 0;
         this.state = false;
         this.damage = 0;
@@ -177,4 +181,8 @@ public class Reactor extends AbstractActor {
         return this.state;
     }
 
+    public void addLight(Light light)
+    {
+        this.light = light;
+    }
 }

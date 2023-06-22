@@ -20,5 +20,4 @@ public class Controler extends AbstractActor {
             this.reactor.turnOn();
         }
     }
-
 }
