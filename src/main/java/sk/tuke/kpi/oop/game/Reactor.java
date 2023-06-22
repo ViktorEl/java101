@@ -170,9 +170,7 @@ public class Reactor extends AbstractActor {
         if (this.damage == 100) {
             return;
         }
-        else {
-            getAnimation().pause();
-        }
+        getAnimation().pause();
     }
 
     public boolean isRunning() {
