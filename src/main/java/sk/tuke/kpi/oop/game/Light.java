@@ -10,6 +10,8 @@ public class Light extends AbstractActor {
 
     private boolean isPowered;
 
+    private Reactor reactor;
+
 
 
     public Light() {
@@ -17,7 +19,6 @@ public class Light extends AbstractActor {
         this.lightOn = new Animation("sprites/light_on.png");
         this.lightOff = new Animation("sprites/light_off.png");
         setAnimation(lightOff);
-
     }
 
     public boolean isOn() {
@@ -32,14 +33,18 @@ public class Light extends AbstractActor {
         if (this.isOn) {
             this.isOn = false;
             setAnimation(lightOff);
-        } else {
+        }
+        else if (!this.isOn && this.isPowered) {
             this.isOn = true;
             setAnimation(lightOn);
         }
     }
 
-
-    private void setElectricityFlow(boolean isPowered) {
+    public void setElectricityFlow(boolean isPowered) {
         this.isPowered = isPowered;
+        if (!this.isPowered) {
+            setAnimation(lightOff);
+        }
     }
+
 }

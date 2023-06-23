@@ -165,8 +165,10 @@ public class Reactor extends AbstractActor {
         this.state = true;
         if (this.temperature == 0) {
             setAnimation(normalAnimation);
+            this.light.setElectricityFlow(true);
         }
         getAnimation().play();
+
     }
 
     public void turnOf() {
@@ -175,14 +177,14 @@ public class Reactor extends AbstractActor {
             return;
         }
         getAnimation().pause();
+        this.light.setElectricityFlow(false);
     }
 
     public boolean isRunning() {
         return this.state;
     }
 
-    public void addLight(Light light)
-    {
+    public void addLight(Light light) {
         this.light = light;
     }
 }
